@@ -1,18 +1,20 @@
 const { Controller } = require("egg");
 
-class UserController extends Controller{
-    async resetPassword () {
+class ToolsController extends Controller{
+    async captchaCreate () {
+        //
         const {ctx} = this
         ctx.body = {
             path: ctx.URL
         }
     }
 
-    async update () {
+    async captchaVerify () {
         const {ctx} = this
         ctx.body = {
             path: ctx.URL
         }
+
     }
 }
-module.exports = UserController
+module.exports = ToolsController

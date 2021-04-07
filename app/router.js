@@ -1,6 +1,6 @@
 module.exports = app => {
     const { router, controller } = app
-    router.get('/user/:id', controller.user.info)
+    // router.get('/user/:id', controller.user.info)
 
     router.resources('users', '/users', controller.users);
 
@@ -17,7 +17,7 @@ module.exports = app => {
     router.post('/api/captch-verify', controller.tools.captchaVerify)
 
     // 修改密码
-    router.post('/api/reset-password', controller.auth.resetPassword)
+    router.post('/api/reset-password', controller.user.resetPassword)
     // 修改用户信息
     router.post('/api/update-userinfo', controller.user.update)
 }
